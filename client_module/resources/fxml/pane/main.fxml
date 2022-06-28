@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml_controller.MainController">
+   <top>
+      <HBox fx:id="headerBox" alignment="CENTER" style="-fx-background-color: white;" styleClass="header" BorderPane.alignment="CENTER">
+         <children>
+            <HBox HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="configBtn" alignment="CENTER" graphicTextGap="0.0" text=" ">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <graphic>
+                        <Group>
+                           <children>
+                              <SVGPath content="M37.4,63.8H26.7c-2.8,0-5.2-2.3-5.2-5.2v-4.5c0-0.1,0-0.1-0.1-0.1c-1.6-0.8-2.8-1.7-4-2.8c-0.2-0.2-0.5-0.4-0.8-0.6l-6.3,3.5c-1.5,0.6-3.2,0-4-1.3l-6-10.3c-0.6-1.5-0.1-3.2,1.3-4l6-3.3c-0.1-1.1-0.2-2.2-0.2-3.3c0-1.3,0.1-2.4,0.2-3.4l-5.8-3.2c-0.8-0.4-1.3-1.1-1.5-2c-0.2-0.8-0.1-1.7,0.3-2.5l5.8-9.9c0.9-1.4,2.6-2.2,4.8-1l5.5,3.1c0.2-0.2,0.5-0.4,0.7-0.6c1.2-1,2.4-2,4-2.8c0.1,0,0.1-0.1,0.1-0.1V5.4c0-2.8,2.3-5.2,5.2-5.2h10.7c2.8,0,5.2,2.3,5.2,5.2v3.9c0,0.1,0,0.1,0.1,0.1c1.6,0.8,2.7,1.7,3.9,2.7c0.3,0.2,0.5,0.5,0.8,0.7l6.3-3.5c1.5-0.6,3.2,0,4,1.3l6.1,10.3c0.6,1.5,0.1,3.2-1.3,4l-5.9,3.3c0.2,1.1,0.2,2.2,0.2,3.5c0,1.1-0.1,2.3-0.3,3.4l5.8,3.2c0.8,0.4,1.3,1.1,1.5,1.9s0.1,1.7-0.3,2.4l-5.9,10c-0.8,1.3-2.6,2.1-4.8,0.9l-5.5-3.1c-0.3,0.2-0.5,0.4-0.8,0.7c-1.2,1-2.3,2-3.9,2.7c-0.1,0-0.1,0.1-0.1,0.1v4.6C42.5,61.5,40.2,63.8,37.4,63.8z M16.8,45.5c0.9,0,1.8,0.3,2.6,0.9c0.5,0.4,0.9,0.7,1.3,1.1c1.1,0.9,1.8,1.6,2.9,2.1c1.8,0.8,3,2.7,3,4.7v4.5c0,0.1,0.1,0.2,0.2,0.2h10.7c0.1,0,0.2-0.1,0.2-0.2V54c0-2,1.1-3.8,2.9-4.6c1-0.5,1.8-1.1,2.8-2c0.4-0.4,0.8-0.7,1.3-1.1c1.3-1.1,3.1-1.2,4.6-0.4l4.9,2.8l4-6.8l-4.6-2.5c-1.6-0.9-2.5-2.7-2.2-4.5c0.2-1,0.3-2.1,0.3-3.1c0-1.1-0.1-2.2-0.2-3.1c-0.3-1.8,0.5-3.6,2.1-4.5l4.7-2.6l-4.1-6.8l-4.9,2.8c-1.5,0.8-3.3,0.7-4.6-0.4c-0.5-0.4-1-0.8-1.4-1.2c-1-0.9-1.8-1.5-2.8-2c-1.8-0.9-2.9-2.7-2.9-4.6V5.3c0-0.1-0.1-0.2-0.2-0.2H26.7c-0.1,0-0.2,0.1-0.2,0.2v4.1c0,2-1.2,3.8-2.9,4.6c-1,0.5-1.8,1.2-2.9,2.1c-0.4,0.3-0.8,0.7-1.3,1c-1.3,1.1-3.1,1.2-4.6,0.4l-4.9-2.7l-4,6.8l4.7,2.6c1.6,0.9,2.5,2.7,2.1,4.5c-0.2,0.9-0.2,1.9-0.2,3c0,1.1,0.1,2.1,0.2,3.1l0,0c0.2,1.8-0.6,3.5-2.1,4.3l-4.8,2.7l4.1,6.8l4.9-2.8C15.4,45.6,16.1,45.5,16.8,45.5z M7.7,35.6L7.7,35.6L7.7,35.6z M32.1,45.2c-7.3,0-13.2-5.9-13.2-13.2s5.9-13.2,13.2-13.2S45.3,24.7,45.3,32C45.2,39.3,39.3,45.2,32.1,45.2z M32.1,23.9c-4.5,0-8.2,3.7-8.2,8.2s3.7,8.2,8.2,8.2s8.2-3.7,8.2-8.2S36.6,23.9,32.1,23.9z" layoutX="20.0" layoutY="20.0" scaleX="0.2" scaleY="0.2" scaleZ="0.2" />
+                           </children>
+                        </Group>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="minusBtn" alignment="CENTER" graphicTextGap="0.0" text=" ">
+                     <graphic>
+                        <Group>
+                           <children>
+                              <SVGPath content="M61.3,34.7H2.7C1.1,34.7,0,33.6,0,32c0-1.6,1.1-2.7,2.7-2.7h58.7c1.6,0,2.7,1.1,2.7,2.7C64,33.6,62.9,34.7,61.3,34.7z" scaleX="0.2" scaleY="0.2" scaleZ="0.2" />
+                           </children>
+                        </Group>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="closeBtn" alignment="CENTER" graphicTextGap="0.0" text=" ">
+                     <graphic>
+                        <Group>
+                           <children>
+                              <SVGPath content="M35.4,32l19.9-19.9c1-1,1-2.4,0-3.4s-2.4-1-3.4,0L32,28.6L12,8.8c-0.9-1-2.4-1-3.3,0s-1,2.4,0,3.4L28.6,32L8.7,51.9c-1,1-1,2.4,0,3.4c0.5,0.4,1,0.7,1.7,0.7s1.2-0.2,1.7-0.7l20-19.9l20,19.8c0.5,0.4,1.2,0.7,1.7,0.7c0.5,0,1.2-0.2,1.7-0.7c1-1,1-2.4,0-3.4L35.4,32z" scaleX="0.2" scaleY="0.2" scaleZ="0.2" />
+                           </children>
+                        </Group>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox stylesheets="@../../css/contactPane.css" BorderPane.alignment="CENTER">
+         <children>
+            <TitledPane text="%Contact">
+               <content>
+                  <VBox style="-fx-padding: 0 0 0 0;">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="193.0" spacing="5.0">
+                           <children>
+                              <JFXTextField fx:id="searchTfd" alignment="CENTER" prefHeight="23.0" prefWidth="218.0" promptText="%Search_contacts">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXButton fx:id="searchBtn" contentDisplay="CENTER" graphicTextGap="0.0" style="-fx-padding: 2 2 2 2;" text=" ">
+                                 <graphic>
+                                    <Group>
+                                       <children>
+                                          <SVGPath content="M62.6,51.2L47.7,36.2c-1.9-1.9-5.1-1.9-6.9,0l-0.3,0.3L35.9,32c5.9-7.7,5.3-19.2-1.9-26.1c-7.7-7.7-20.5-7.7-28.3,0s-7.7,20.5,0,28.3c4,4,9.1,5.9,14.1,5.9c4.3,0,8.5-1.3,12-4l4.5,4.5l-0.3,0.3c-1.9,1.9-1.9,5.1,0,6.9l14.9,14.9c1.1,1.1,2.1,1.3,3.5,1.3c1.3,0,2.4-0.5,3.5-1.3l4.3-4.3C64.5,56.2,64.5,53.3,62.6,51.2z M9.5,30.4c-5.6-5.6-5.6-14.9,0-20.8c2.9-2.9,6.7-4.3,10.4-4.3s7.5,1.3,10.4,4.3c5.6,5.6,5.6,14.9,0,20.8C24.5,36,15.4,36,9.5,30.4z M54.9,58.6L40.5,44.2l3.7-3.7l14.4,14.4L54.9,58.6z" scaleX="0.3" scaleY="0.3" scaleZ="0.3" />
+                                       </children>
+                                    </Group>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView prefHeight="574.0" prefWidth="250.0">
+                          <columns>
+                            <TableColumn editable="false" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" />
+                            <TableColumn editable="false" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" sortable="false" />
+                              <TableColumn editable="false" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" sortable="false" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="355.0" prefWidth="254.0" text="%Request">
+               <content>
+                  <TableView prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                      <TableColumn editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="-1.0" sortable="false" />
+                    </columns>
+                  </TableView>
+               </content>
+            </TitledPane>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-image-width: 3 3 3 3;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" styleClass="header">
+               <children>
+                  <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="contactTitleLabel" text="Chatting With XXX">
+                           <HBox.margin>
+                              <Insets left="6.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="closeChatBtn" alignment="CENTER" graphicTextGap="0.0" text=" ">
+                           <graphic>
+                              <Group>
+                                 <children>
+                                    <SVGPath content="M35.4,32l19.9-19.9c1-1,1-2.4,0-3.4s-2.4-1-3.4,0L32,28.6L12,8.8c-0.9-1-2.4-1-3.3,0s-1,2.4,0,3.4L28.6,32L8.7,51.9c-1,1-1,2.4,0,3.4c0.5,0.4,1,0.7,1.7,0.7s1.2-0.2,1.7-0.7l20-19.9l20,19.8c0.5,0.4,1.2,0.7,1.7,0.7c0.5,0,1.2-0.2,1.7-0.7c1-1,1-2.4,0-3.4L35.4,32z" scaleX="0.2" scaleY="0.2" scaleZ="0.2" />
+                                 </children>
+                              </Group>
+                           </graphic>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox fx:id="messageVBox" prefHeight="387.0" prefWidth="546.0" VBox.vgrow="ALWAYS" />
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="148.0" prefWidth="546.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXTextArea fx:id="inputTextArea" prefHeight="156.0" prefWidth="504.0" promptText="%Enter_texts_or_select_files">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextArea>
+                  <VBox alignment="CENTER" prefWidth="10.0" spacing="25.0">
+                     <children>
+                        <JFXButton fx:id="sendMsgtn" contentDisplay="CENTER" graphicTextGap="0.0" text=" ">
+                           <graphic>
+                              <Group>
+                                 <children>
+                                    <SVGPath content="M63.8,10l-9.7,45.5c-0.7,3.2-2.6,4-5.3,2.5L34.1,47.3L27,54.1c-0.8,0.8-1.4,1.4-3,1.4l1.1-15l27.3-24.6c1.2-1.1-0.3-1.6-1.8-0.6L16.8,36.5L2.3,32c-3.2-1-3.2-3.2,0.7-4.7L59.7,5.4C62.4,4.5,64.7,6,63.8,10z" scaleX="0.4" scaleY="0.4" scaleZ="0.4" />
+                                 </children>
+                              </Group>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="sendFileBtn" contentDisplay="CENTER" graphicTextGap="0.0" text=" ">
+                           <graphic>
+                              <Group>
+                                 <children>
+                                    <SVGPath content="M60.5,0H30.1c-1.9,0-3.5,1.6-3.5,3.5V16H3.5C1.6,16,0,17.6,0,19.5v26.4c0,1.3,0.5,2.9,1.6,3.7l13.1,12.8c1.1,1.1,2.4,1.6,3.7,1.6h15.5c1.9,0,3.5-1.6,3.5-3.5V42.4l4.1,4.1c1.1,1.1,2.4,1.6,3.7,1.6h15.5c1.9,0,3.5-1.6,3.5-3.5V3.5C64,1.6,62.4,0,60.5,0z M7.5,48H16v8.3L7.5,48z M32,58.7H21.3V46.1c0-1.9-1.6-3.5-3.5-3.5H5.3V21.3H32V58.7z M37.3,35.2v-0.5H40v2.9L37.3,35.2z M58.7,42.7H45.3v-9.9c0-1.9-1.6-3.5-3.5-3.5h-4.5v-9.9c0-1.9-1.6-3.5-3.5-3.5H32V5.3h26.7V42.7z" scaleX="0.4" scaleY="0.4" scaleZ="0.4" />
+                                 </children>
+                              </Group>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="moreChoiceBtn" contentDisplay="CENTER" graphicTextGap="0.0" text=" ">
+                           <graphic>
+                              <Group>
+                                 <children>
+                                    <SVGPath content="M61.3,29.3H2.7C1.1,29.3,0,30.4,0,32c0,1.6,1.1,2.7,2.7,2.7h58.7c1.6,0,2.7-1.1,2.7-2.7C64,30.4,62.9,29.3,61.3,29.3z M61.3,48H2.7C1.1,48,0,49.1,0,50.7c0,1.6,1.1,2.7,2.7,2.7h58.7c1.6,0,2.7-1.1,2.7-2.7C64,49.1,62.9,48,61.3,48z M2.7,16h58.7c1.6,0,2.7-1.1,2.7-2.7s-1.1-2.7-2.7-2.7H2.7c-1.6,0-2.7,1.1-2.7,2.7S1.1,16,2.7,16z" scaleX="0.4" scaleY="0.4" scaleZ="0.4" />
+                                 </children>
+                              </Group>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

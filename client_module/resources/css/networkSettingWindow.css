@@ -1,0 +1,18 @@
+/* #1 */
+.titled-pane > .title {
+	-fx-background-color: lightgray;
+	-fx-alignment: center-right;
+}
+/* #2 */
+.titled-pane > .title > .text {
+	-fx-font-size: 12px;
+	-fx-underline: true;
+}
+/* #3 */
+.titled-pane > .title > .arrow-button > .arrow {
+	-fx-background-color: blue;
+}
+/* #4 */
+/*.titled-pane > .content {
+	-fx-background-color: burlywood;
+}*/

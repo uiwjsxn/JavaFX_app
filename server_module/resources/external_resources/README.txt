@@ -1,0 +1,1 @@
+The resources here are not the parts of server_module

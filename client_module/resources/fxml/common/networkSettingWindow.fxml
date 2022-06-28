@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml_controller.NetworkSettingController">
+   <children>
+      <HBox fx:id="headerBox" alignment="CENTER" style="-fx-background-color: white;" styleClass="header">
+         <children>
+            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="titleLabel" text="%Network_Setting">
+                     <HBox.margin>
+                        <Insets left="6.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="closeBtn" alignment="CENTER" graphicTextGap="0.0" text=" ">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <graphic>
+                        <Group>
+                           <children>
+                              <SVGPath content="M35.4,32l19.9-19.9c1-1,1-2.4,0-3.4s-2.4-1-3.4,0L32,28.6L12,8.8c-0.9-1-2.4-1-3.3,0s-1,2.4,0,3.4L28.6,32L8.7,51.9c-1,1-1,2.4,0,3.4c0.5,0.4,1,0.7,1.7,0.7s1.2-0.2,1.7-0.7l20-19.9l20,19.8c0.5,0.4,1.2,0.7,1.7,0.7c0.5,0,1.2-0.2,1.7-0.7c1-1,1-2.4,0-3.4L35.4,32z" scaleX="0.2" scaleY="0.2" scaleZ="0.2" />
+                           </children>
+                        </Group>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <Accordion fx:id="accordion" stylesheets="@../../css/networkSettingWindow.css" VBox.vgrow="ALWAYS">
+         <panes>
+            <TitledPane fx:id="firstTitledPane" layoutX="10.0" layoutY="33.0" text="%Server1">
+               <content>
+                  <GridPane alignment="CENTER">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="152.79998779296875" minWidth="10.0" prefWidth="100.6" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.20005187988284" minWidth="10.0" prefWidth="212.2000244140625" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="256.800048828125" minWidth="10.0" prefWidth="49.79997558593749" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefWidth="85.0" text="%Hostname">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="%Port" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="hostnameTfd1" alignment="CENTER" GridPane.columnIndex="1" />
+                        <JFXTextField fx:id="portTfd1" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="hostnameLabel1" text="%Valid" visible="false" GridPane.columnIndex="2" />
+                        <Label fx:id="portLabel1" text="%Invalid" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="60.0" right="60.0" top="20.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </TitledPane>
+            <TitledPane layoutX="10.0" layoutY="10.0" text="%Server2">
+               <content>
+                  <GridPane alignment="CENTER">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="152.79998779296875" minWidth="10.0" prefWidth="100.6" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.20005187988284" minWidth="10.0" prefWidth="212.2000244140625" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="256.800048828125" minWidth="10.0" prefWidth="49.79997558593749" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefWidth="85.0" text="%Hostname">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="%Port" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="hostnameTfd2" alignment="CENTER" GridPane.columnIndex="1" />
+                        <JFXTextField fx:id="portTfd2" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="hostnameLabel2" GridPane.columnIndex="2" />
+                        <Label fx:id="portLabel2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="60.0" right="60.0" top="20.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </TitledPane>
+            <TitledPane layoutX="10.0" layoutY="10.0" text="%Server3">
+               <content>
+                  <GridPane alignment="CENTER">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="152.79998779296875" minWidth="10.0" prefWidth="100.6" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.20005187988284" minWidth="10.0" prefWidth="212.2000244140625" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="256.800048828125" minWidth="10.0" prefWidth="49.79997558593749" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefWidth="85.0" text="%Hostname">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="%Port" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="hostnameTfd3" alignment="CENTER" GridPane.columnIndex="1" />
+                        <JFXTextField fx:id="portTfd3" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="hostnameLabel3" GridPane.columnIndex="2" />
+                        <Label fx:id="portLabel3" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="60.0" right="60.0" top="20.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <HBox alignment="BOTTOM_CENTER" spacing="60.0" VBox.vgrow="SOMETIMES">
+         <children>
+            <JFXButton fx:id="resetBtn" text="%Reset">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="confirmBtn" text="%Confirm">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="cancelBtn" text="%Cancel">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

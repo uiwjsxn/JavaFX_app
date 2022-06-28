@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Jun 28 17:32:40 JST 2022:
+正在使用类加载程序 jdk.internal.loader.ClassLoaders$AppClassLoader@4909b8da 引导数据库
+目录 C:\Users\xziha\Desktop\new_app\app\codes\client_module\resources\database\clientDB 中的 Derby 版本 The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585) 实例 a816c00e-0181-a970-f14e-000006c1dc08
+已从 file:/C:/Users/xziha/Desktop/Java%20Runtime/db-derby-10.15.2.0-bin/lib/derby.jar 加载
+java.vendor=Oracle Corporation
+java.runtime.version=17.0.2+8-LTS-86
+user.dir=C:\Users\xziha\Desktop\new_app\app\codes\client_module
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+数据库类加载程序已启动 - derby.database.classpath=''
